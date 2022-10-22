@@ -1,3 +1,1 @@
-# my_projects
-
-different examples and reflections
+# concurrent application 1 (Thread Safe)
