@@ -15,20 +15,19 @@ class AccountServiceImplTest {
 
     @Test
     void testSentToAccount() {
-        var thread1 = new Thread(() -> {
-            for (int i = 0; i < 2; i++) {
-                accountServiceImpl.sentToAccount(new Account("18", 666));
-                accountServiceImpl.sentToAccount(new Account("14", 999));
-            }
-        });
-        var thread2 = new Thread(() -> {
-            for (int i = 0; i < 2; i++) {
-                accountServiceImpl.sentToAccount(new Account("18", 666));
-                accountServiceImpl.sentToAccount(new Account("14", 999));
-            }
-        });
-        thread1.start();
-        thread2.start();
+        for (int i = 0; i < 10; i++) {
+            var thread1 = new Thread(() -> {
+                    accountServiceImpl.sentToAccount(new Account("18", 666));
+                    accountServiceImpl.sentToAccount(new Account("14", 999));
+
+            });
+            var thread2 = new Thread(() -> {
+                    accountServiceImpl.sentToAccount(new Account("18", 666));
+                    accountServiceImpl.sentToAccount(new Account("14", 999));
+            });
+            thread1.start();
+            thread2.start();
+        }
 
         try {
             Thread.sleep(1000);
@@ -37,7 +36,7 @@ class AccountServiceImplTest {
         }
 
         Assertions.assertEquals(2, Cash.accountMap.size());
-        Assertions.assertEquals(2664, Cash.accountMap.get("18").totalBalance());
-        Assertions.assertEquals(3996, Cash.accountMap.get("14").totalBalance());
+        Assertions.assertEquals(13320, Cash.accountMap.get("18").totalBalance());
+        Assertions.assertEquals(19980, Cash.accountMap.get("14").totalBalance());
     }
 }
