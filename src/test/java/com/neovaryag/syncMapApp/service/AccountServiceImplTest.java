@@ -1,7 +1,7 @@
-package com.example.dannapp.service;
+package com.neovaryag.syncMapApp.service;
 
-import com.example.dannapp.common.Cash;
-import com.example.dannapp.model.Account;
+import com.neovaryag.syncMapApp.common.Cash;
+import com.neovaryag.syncMapApp.model.Account;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

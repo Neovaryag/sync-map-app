@@ -1,11 +1,11 @@
-package com.example.dannapp.service;
+package com.neovaryag.syncMapApp.service;
 
-import com.example.dannapp.model.Account;
+import com.neovaryag.syncMapApp.model.Account;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import static com.example.dannapp.common.Cash.accountMap;
+import static com.neovaryag.syncMapApp.common.Cash.accountMap;
 
 @Service
 public class AccountServiceImpl implements AccountService {

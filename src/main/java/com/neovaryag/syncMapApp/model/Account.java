@@ -1,4 +1,4 @@
-package com.example.dannapp.model;
+package com.neovaryag.syncMapApp.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

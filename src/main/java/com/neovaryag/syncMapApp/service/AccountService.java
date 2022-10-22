@@ -1,6 +1,6 @@
-package com.example.dannapp.service;
+package com.neovaryag.syncMapApp.service;
 
-import com.example.dannapp.model.Account;
+import com.neovaryag.syncMapApp.model.Account;
 
 public interface AccountService {
 

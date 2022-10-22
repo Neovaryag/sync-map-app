@@ -1,6 +1,6 @@
-package com.example.dannapp.common;
+package com.neovaryag.syncMapApp.common;
 
-import com.example.dannapp.model.Account;
+import com.neovaryag.syncMapApp.model.Account;
 
 import java.util.Collections;
 import java.util.HashMap;
